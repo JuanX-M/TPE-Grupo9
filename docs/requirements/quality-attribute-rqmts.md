@@ -10,3 +10,16 @@
 | QA-6     | Security                | Los datos de los clientes deben estar protegidos contra accesos no autorizados, permitiendo su acceso solo a los administradores con los permisos adecuados y cumplimiendo con las normativas de protección de datos.    | UC-1, UC-8               |
 | QA-7     | Interoperability        | La integración con la pasarela de pago MercadoLibre debe garantizar transacciones seguras para los clientes.                                                  | UC-6                     |
 | QA-8     | Maintainability         | La lógica de negocio debe estar desacoplada, permitiendo implementar nuevas optimizaciones en los algoritmos de reparto o cambios en las rutas producidos por fallas durante el envío, sin afectar a otros envíos ni realizar cambios en otras partes del sistema. | UC-3, UC-5               |
+         
+# Tabla de Priorización de Atributos de Calidad
+
+| **Scenario ID** | **Importance to Customer** | **Difficulty of Implementation According to Architect** |
+|-----------------|----------------------------|---------------------------------------------------------|
+| QA-1            | Alta                       | Alta                                                    |
+| QA-2            | Alta                       | Media                                                   |
+| QA-3            | Media                      | Alta                                                    |
+| QA-4            | Alta                       | Alta                                                    |
+| QA-5            | Baja                       | Media                                                   |
+| QA-6            | Alta                       | Alta                                                    |
+| QA-7            | Alta                       | Media                                                   |
+| QA-8            | Alta                       | Alta                                                    |

@@ -2,7 +2,7 @@
 
 | **ID**   | **Quality Attribute**   | **Escenario**                                                                                                                                | **Caso de Uso Asociado** |
 |----------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
-| QA-1     | Performance             | El sistema debe manejar hasta 5,000 solicitudes simultáneas de clientes, como consultas de datos personales o peticiones de pedidos, con una latencia de < 2 segundos. | UC-1, UC-8               |
+| QA-1     | Performance             | El sistema debe manejar hasta 5,000 solicitudes simultáneas de clientes, como consultas de datos personales o peticiones de pedidos, con una latencia de < 2 segundos. | UC-1               |
 | QA-2     | Performance             | Los administradores deben ser capaces de realizar operaciones (como consultas y modificaciones de datos) en menos de 2 segundos, incluso durante picos de demanda en el sistema          | UC-3, UC-5               |
 | QA-3     | Availability            | El servicio de pedidos debe tener un tiempo de actividad del 99.9%, garantizando que las tres fases del pedido se procesen correctamente, y en caso de fallos, el sistema debe manejar adecuadamente los errores o reintentos.   | UC-2                     |
 | QA-4     | Performance             | Los algoritmos de optimización utilizados para la gestión de las rutas de los camiones deben ser capaces de procesar y asignar rutas en menos de 1 segundo por camión, incluso durante picos de alta demanda o con una gran cantidad de camiones. | UC-3                     |

@@ -20,11 +20,11 @@
 ## UC-4: Gestion de rutas
 **Descripción**: El administrador del sistema debe de poder visualizar cómo el sistema calculo las rutas de recorrido para los repartidores.
 
-## UC-5:Generar reportes estadisticos
+## UC-5: Generar reportes estadisticos
 **Descripción**: El administrador del sistema puede acceder a reportes detallados sobre estadísticas generadas a partir de los estados de los pedidos, situación en tiempo real de los camiones e información de los clientes.
 
 ## UC-6: Obtener reportes de incidencias
-**Descripción**:El administrador del sistema debe poder recibir incidencias ocurridas durante el reparto de los productos alimenticios.
+**Descripción**: El administrador del sistema debe poder recibir incidencias ocurridas durante el reparto de los productos alimenticios.
 
-## UC-7:Realizar pagos
+## UC-7: Realizar pagos
 **Descripción**: Los clientes (PC y movil) deben de poder realizar pagos seguros utilizando una pasarela de pagos externa integrada al sistema.

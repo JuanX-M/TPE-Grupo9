@@ -1,49 +1,30 @@
 
 # ***Actores***
 
-- Cliente
-- Administrador
-- Base de datos de Clientes:
-- Base de datos de Pedidos:
-- Sistema de monitoreo
-- Sistema de pago externo(MercadoLibre)
-- Repartidor
+- Clientes PC y movil
+- Administrador del sistema
 
 <br>
 
 # Casos de Uso
 
-## UC-1 Gestión de Datos de Clientes
-**Descripción**: Permite a los clientes gestionar su información personal, como datos de contacto, dirección y detalles de pago.
-**Actores**: [Cliente], [Base de datos de Clientes].
+## UC-1: Acceder a datos personales
+**Descripción**: Los clientes (PC y móvil) y administrador del sistema deben de acceder a los datos personales de los clientes (alojados en la base de datos Clientes) para realizar consultas, verificar o modificar ciertos datos.
 
-## UC-2 Realizar Pedido
-**Descripción**: Los clientes pueden realizar pedidos de productos, con un límite de 3 intentos para completar el pedido, pasando por las fases de preprocesado, autorización y aceptación.  
-**Actores**: [Cliente], [Base de datos de Pedidos].
+## UC-2: Solicitar pedidos
+**Descripción**: Los clientes (PC y movil) deben de poder realizar pedidos a la compañía de productos.
 
-## UC-3 Gestión de Reparto y Rutas
-**Descripción**:   Los administradores gestionan las rutas de reparto y optimizan los algoritmos de distribución de los camiones según la demora.  
-**Actores**: [Administrador],[Sistema de monitoreo],[Base de datos de Pedidos].
+## UC-3: Gestion de reparto
+**Descripción**: El administrador del sistema debe poder visualizar cómo el sistema asignó la distribución de productos entre los repartidores.
 
-## UC-4 Generación de Estadísticas
-**Descripción**: Proporciona datos en tiempo real sobre pedidos, clientes y el estado de los camiones.  
-**Actores**: [Administrador], [Sistema de monitoreo],[Base de Datos de Pedidos].
+## UC-4: Gestion de rutas
+**Descripción**: El administrador del sistema debe de poder visualizar cómo el sistema calculo las rutas de recorrido para los repartidores.
 
-## UC-5 Gestión de Incidencias
-**Descripción**: Permite registrar y gestionar problemas relacionados con las rutas, como retrasos o fallas en los camiones.  
-**Actores**: [Repartidor], [Administrador],[Base de Datos de Pedidos].
+## UC-5:Generar reportes estadisticos
+**Descripción**: El administrador del sistema puede acceder a reportes detallados sobre estadísticas generadas a partir de los estados de los pedidos, situación en tiempo real de los camiones e información de los clientes.
 
-## UC-6 Procesamiento de Pagos
-**Descripción**: Gestiona los pagos de los clientes a través de la pasarela de pago de MercadoLibre, asegurando la seguridad y compatibilidad.
-**Actores**: [Cliente], [Sistema de pago externo(MercadoLibre)], [Base de datos de Clientes].
+## UC-6: Obtener reportes de incidencias
+**Descripción**:El administrador del sistema debe poder recibir incidencias ocurridas durante el reparto de los productos alimenticios.
 
-## UC-7 Actualización de Inventarios
-**Descripción**: Gestiona la información de inventarios actualizada en función de los pedidos realizados y entregados.  
-**Actores**: [Administrador], [Sistema de monitoreo], [Base de datos].
-
-
-## UC-8 Gestionar Información de Clientes
-**Descripción**:  Los administradores pueden acceder, actualizar y gestionar los datos de los clientes.
-**Actores**: [Administrador], [Base de Datos de Clientes].
-
-
+## UC-7:Realizar pagos
+**Descripción**: Los clientes (PC y movil) deben de poder realizar pagos seguros utilizando una pasarela de pagos externa integrada al sistema.

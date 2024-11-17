@@ -24,6 +24,7 @@ El sistema debe ser capaz de soportar un aumento significativo de solicitudes de
 ### Q-2
 
 El sistema de pedidos sigue una secuencia estricta de tres fases: preprocesado del pedido, autorización y aceptación. Cada fase debe completarse correctamente antes de avanzar a la siguiente. El tiempo total para completar estas fases no debe exceder 1 segundo.
+
 **Caso de uso que ataca**: UC-2
 
 **Origen del estímulo**: Clientes (PC y móvil)
@@ -74,9 +75,27 @@ Un cliente desea acceder a sus datos personales. Se espera que esta operación s
 
 **Medida de respuesta**: El tiempo de acceso no debe ser mayor a un segundo.
 
+### Q-5
+
+El sistema debe tener la capacidad de registrar una incidencia, como fallos masivos en camiones o condiciones climáticas adversas. En un tiempo menor a 4 segundos.
+
+**Caso de uso que ataca**: UC-6.
+
+**Origen del estímulo**: Choque imprevisto o condiciones climaticas adversas.
+
+**Estimulo**: Incidencia en la ruta.
+
+**Artefacto**: Sistema de incidencias.
+
+**Ambiente**: Sistema operando con normalidad.
+
+**Respuesta**: El sistema registra la incidencia.
+
+**Medida de respuesta**: El sistema registra la incidencia en un tiempo menor a 4 segundos.
+
 ## Usabilidad
 
-### Q-5:
+### Q-6:
 
 El administrador del sistema necesita consultar informacion valiosa (como estado de pedidos, camiones y clientes) de manera rapida, para tomar decisiones operativas.
 
@@ -96,7 +115,7 @@ El administrador del sistema necesita consultar informacion valiosa (como estado
 
 ## Modificabilidad
 
-### Q-6
+### Q-7
 
 La lógica de negocio debe estar desacoplada, permitiendo realizar cambios rapidamente en sus dominios sin afectar a otras partes del sistema.
 
@@ -116,11 +135,11 @@ La lógica de negocio debe estar desacoplada, permitiendo realizar cambios rapid
 
 ## Interoperabilidad
 
-### Q-7
+### Q-8
 
 El sistema de pago debe aceptar la integración con la pasarela de pago externa que proporciona la empresa MercadoLibre para garantizar la seguridad de los pagos y compatibilidad con otros clientes.
 
-**Caso de uso que ataca**: UC-5,UC-7.
+**Caso de uso que ataca**:UC-7.
 
 **Origen del estímulo**: Clientes (PC y móvil).
 
@@ -132,3 +151,15 @@ El sistema de pago debe aceptar la integración con la pasarela de pago externa 
 **Respuesta**: El sistema verifica el saldo de la persona en su sistema y realiza el pago por medio de la pasarela de pago(MercadoLibre).
 
 **Medida de respuesta**: La verificacion de los datos del cliente y el pago se deben de realizar en menos de 5 segundos.
+# ***Niveles de criticdad***
+
+| Id de Atributo de Calidad | Importancia para el Cliente | Nivel de dificultad de implementacion para el SSA |
+|----------------------------|-----------------------------|--------------------------------------------------|
+| Q-1                        | semi-crítico               | media                                             |
+| Q-2                        | semi-crítico               | media                                             |
+| Q-3                        | crítico                    | alta                                              |
+| Q-4                        | crítico                    | baja                                              |
+| Q-5                        | semi-crítico               | media                                             |
+| Q-6                        | no crítico                 | baja                                              |
+| Q-7                        | crítico                    | alta                                              |
+| Q-8                        | crítico                    | media                                             |

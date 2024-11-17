@@ -20,7 +20,7 @@ Las iteraciones del método ADD están registradas en GitHub con los siguientes 
 
 ## Roles y Responsabilidades
 
-- **SSR (Juan Cruz)**: Responsable de las **decisiones de diseño** y las **modificaciones de diseño**. Todos los commits relacionados con la toma de decisiones sobre el diseño del sistema y las actualizaciones del mismo estarán a cargo de Juan Cruz.
+- **SSR (Juan Cruz Muñoz<JuanX-M>)**: Responsable de las **decisiones de diseño** y las **modificaciones de diseño**. Todos los commits relacionados con la toma de decisiones sobre el diseño del sistema y las actualizaciones del mismo estarán a cargo de Juan Cruz.
   
 - **ASJ (A definir)**: Responsable de la creación y actualización de **gráficos de UML**. Los gráficos relacionados con la estructura y el flujo del sistema se gestionarán mediante este rol.
   
@@ -31,4 +31,3 @@ Las iteraciones del método ADD están registradas en GitHub con los siguientes 
 - **Consistencia en los Mensajes de Commit**: Los mensajes de commit siguen una estructura consistente para reflejar las iteraciones del método ADD y el trabajo realizado en cada una de ellas. Esto ayuda a mantener un registro claro y ordenado de los avances en el proyecto.
 
 - **Relación entre Iteraciones y Tareas**: Las modificaciones de diseño y los gráficos de UML estarán vinculados directamente con cada iteración del método ADD. Si bien no es necesario seguir esta regla estrictamente, se busca mantener consistencia en el proceso de desarrollo y documentación.
-!

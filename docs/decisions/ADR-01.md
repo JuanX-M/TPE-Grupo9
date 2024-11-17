@@ -33,4 +33,4 @@ Esta arquitectura es rígida, difícil de evolucionar y limita la escalabilidad 
 * Costo extra para aprender nuevas tecnologías como Docker y Spring Boot.  
 
 ## Confirmación  
-Pendiente
+Aceptada

@@ -7,6 +7,14 @@ La compañía opera con un sistema monolítico que utiliza dos bases de datos SQ
 
 Esta arquitectura es rígida, difícil de evolucionar y limita la escalabilidad y la capacidad de adaptación a nuevas necesidades.  
 
+### Módulos funcionales actuales  
+1. **Clientes (Crítico)**: Gestiona los datos personales de los clientes.  
+2. **Pedidos (Semi-Crítico)**: Procesa pedidos mediante un flujo de tres fases: preprocesamiento, autorización y aceptación.  
+3. **Reparto y rutas (Crítico)**: Gestiona la logística, incluyendo optimización de rutas de transporte.  
+4. **Estadísticas (No Crítico)**: Proporciona información sobre pedidos y la logística de la flota.  
+5. **Incidencias (Semi-Crítico)**: Reporta problemas como fallas en la entrega o averías de vehículos.  
+6. **Pagos (Crítico)**: Utiliza una pasarela de pago externa para garantizar transacciones seguras.  
+
 ## Drivers de decisión  
 * R-1
 * QA-7: Modificabilidad

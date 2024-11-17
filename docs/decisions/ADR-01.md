@@ -20,7 +20,7 @@ Para solucionar estas limitaciones, se propone migrar a una arquitectura basada 
 6. **Pagos (Crítico)**: Utiliza una pasarela de pago externa para garantizar transacciones seguras.  
 
 ## Decisión  
-La migración se realizará en fases. En cada fase, se transformará un conjunto de funcionalidades del sistema monolítico en microservicios independientes. Este enfoque permite garantizar la continuidad del negocio durante la transición.  
+La migración se realizara de manera gradual utilizando el patrón Strangler. En cada fase, se reemplazarán progresivamente partes del sistema monolítico por microservicios independientes. Este enfoque permite que el sistema siga funcionando durante todo el proceso de transición, garantizando la continuidad del negocio mientras se realiza la modernización de manera incremental y controlada.
 
 ## Razonamiento  
 Una migración en fases ofrece varias ventajas:  

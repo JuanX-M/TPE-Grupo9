@@ -1,0 +1,33 @@
+# Patrón Strangler Application para Migración de Arquitectura Monolítica
+
+## Motivación
+La empresa busca migrar su arquitectura monolítica actual hacia una basada en microservicios, lo que permitirá una mayor flexibilidad y facilidad para evolucionar. El requerimiento principal es habilitar a los administradores del sistema y a los clientes (PC y móvil) el acceso a los datos personales almacenados en la base de datos de Clientes. Para lograr esto, aplicaremos el patrón Strangler Application, que ofrece un enfoque incremental para la migración.
+
+La arquitectura monolítica actual tiene un alto grado de acoplamiento, lo que dificulta reemplazar componentes individuales sin interrumpir todo el sistema. El patrón Strangler Application aborda este problema al reemplazar gradualmente el monolito con nuevos servicios, permitiendo una demostración temprana del valor para el negocio y minimizando los cambios en la lógica existente.
+
+## Factores de Decisión
+- Requerimiento de permitir el acceso a datos personales de los clientes desde la base de datos de Clientes.
+- Necesidad de migrar desde una arquitectura monolítica hacia una basada en microservicios.
+- Importancia de minimizar cambios en la lógica del negocio existente.
+
+## Decisión Principal
+Se aplicará el patrón Strangler Application para realizar la migración de la arquitectura monolítica a una basada en microservicios. Este enfoque permitirá reemplazos graduales del monolito con nuevos servicios, demostrando valor temprano al negocio y minimizando los cambios en la lógica existente.
+
+El equipo de desarrollo deberá planificar cuidadosamente los nuevos servicios para garantizar que cumplan con los requisitos y estén bien integrados con el monolito existente. Se establecerá un cronograma claro con hitos, junto con demostraciones regulares de avances para justificar la inversión.
+
+## Decisiones Alternativas
+- **Patrón de microservicios completo**: Requiere un esfuerzo inicial significativo para diseñar e implementar los nuevos servicios, lo que podría retrasar la migración.
+- **Arquitectura monolítica tradicional**: No aborda el requerimiento de permitir el acceso a los datos personales de los clientes desde la base de datos de Clientes.
+
+## Pros
+- Permite un enfoque incremental para la migración a microservicios.
+- Demostración temprana de valor al negocio.
+- Minima los cambios en la lógica del negocio existente.
+- Facilita la planificación cuidadosa de los nuevos servicios y su integración con el monolito.
+
+## Contras
+- Puede introducir complejidad y sobrecarga adicionales.
+- Requiere un esfuerzo inicial significativo para el diseño e implementación de nuevos servicios.
+
+## Evaluación
+La decisión de aplicar el patrón Strangler Application es adecuada para el contexto y los requisitos planteados. Este patrón se alinea con el objetivo de la empresa de migrar hacia una arquitectura más flexible y evolutiva. Sin embargo, es esencial planificar cuidadosamente los servicios, diseñar su integración y establecer un cronograma claro para garantizar el éxito de la migración.

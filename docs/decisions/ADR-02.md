@@ -1,5 +1,9 @@
 # ADR 02: Comunicación entre Microservicios mediante Servicios REST 
 
+## Estado  
+Aceptada.
+
+
 ## Contexto y Declaración del Problema  
 Como parte de la migración de la arquitectura monolítica a una basada en microservicios para la compañía de productos alimenticios, hay que establecer cómo se comunicarán los servicios. 
 
@@ -26,6 +30,3 @@ Como parte de la migración de la arquitectura monolítica a una basada en micro
 **Negativas, porque:**  
 * A medida que aumenta la carga de trabajo, se pueden generar cuellos de botella. 
 * La latencia de las comunicaciones puede ser un problema, especialmente si el sistema se encuentra bajo alta demanda.
-
-## Estado  
-Aceptada.

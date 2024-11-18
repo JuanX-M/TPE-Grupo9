@@ -1,5 +1,8 @@
 # ADR 01: Migración de una Arquitectura Monolítica a Microservicios  
 
+## Estado
+Aceptada.
+
 ## Contexto y Declaración del Problema  
 La compañía opera con un sistema monolítico que utiliza dos bases de datos SQL:  
 * **Base de Clientes**: Contiene datos personales de clientes y pagos.  
@@ -39,6 +42,3 @@ Esta arquitectura es rígida, difícil de evolucionar y limita la escalabilidad 
 * Requiere diseñar un plan de migración para evitar problemas de compatibilidad.  
 * Genera complejidad al mantener operativos el monolito y los microservicios simultáneamente.  
 * Costo extra para aprender nuevas tecnologías como Docker y Spring Boot.  
-
-## Confirmación  
-Aceptada

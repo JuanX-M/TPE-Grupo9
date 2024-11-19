@@ -28,4 +28,3 @@ Junto al patrón **Strangler Application** para la transición gradual y necesit
 **Negativas, porque**:
 - **Punto único de fallo**: El API Gateway debe estar configurado para alta disponibilidad, ya que su fallo podría afectar la disponibilidad de los servicios.
 - **Latencia adicional**: Introduce una capa adicional en el enrutamiento de las solicitudes, lo que podría generar una pequeña sobrecarga en el rendimiento.
-

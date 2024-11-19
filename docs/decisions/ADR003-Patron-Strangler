@@ -1,33 +1,31 @@
-# Patrón Strangler Application para Migración de Arquitectura Monolítica
+# ADR 03: Implementación de API Gateway con Servicios REST para la Gestión de Solicitudes
 
-## Motivación
-La empresa busca migrar su arquitectura monolítica actual hacia una basada en microservicios, lo que permitirá una mayor flexibilidad y facilidad para evolucionar. El requerimiento principal es habilitar a los administradores del sistema y a los clientes (PC y móvil) el acceso a los datos personales almacenados en la base de datos de Clientes. Para lograr esto, aplicaremos el patrón Strangler Application, que ofrece un enfoque incremental para la migración.
+## Estado
+Propuesta.
 
-La arquitectura monolítica actual tiene un alto grado de acoplamiento, lo que dificulta reemplazar componentes individuales sin interrumpir todo el sistema. El patrón Strangler Application aborda este problema al reemplazar gradualmente el monolito con nuevos servicios, permitiendo una demostración temprana del valor para el negocio y minimizando los cambios en la lógica existente.
+## Contexto y Declaración del Problema
+La funcionalidad principal es habilitar a los administradores del sistema y a los clientes (PC y móvil) el acceso a los datos personales almacenados en la base de datos de Clientes. 
+Junto al patrón **Strangler Application** para la transición gradual y necesitando una forma de gestionar y enrutar las solicitudes a los diferentes servicios (monolíticos y microservicios) de manera eficiente y escalable. Se decide utilizar el  patron **API Gateway**  para gestionar las solicitudes HTTP/REST y dirigirlas a los servicios correspondientes
 
-## Factores de Decisión
-- Requerimiento de permitir el acceso a datos personales de los clientes desde la base de datos de Clientes.
-- Necesidad de migrar desde una arquitectura monolítica hacia una basada en microservicios.
-- Importancia de minimizar cambios en la lógica del negocio existente.
+## Drivers de Desicion
+* Q-4
 
-## Decisión Principal
-Se aplicará el patrón Strangler Application para realizar la migración de la arquitectura monolítica a una basada en microservicios. Este enfoque permitirá reemplazos graduales del monolito con nuevos servicios, demostrando valor temprano al negocio y minimizando los cambios en la lógica existente.
+## Opciones Consideradas
+- **Uso de un API Gateway** para gestionar el acceso y enrutar las solicitudes HTTP a los servicios correspondientes.
+- **Comunicación directa entre servicios** sin un API Gateway centralizado, permitiendo que los clientes interactúen directamente con los microservicios.
 
-El equipo de desarrollo deberá planificar cuidadosamente los nuevos servicios para garantizar que cumplan con los requisitos y estén bien integrados con el monolito existente. Se establecerá un cronograma claro con hitos, junto con demostraciones regulares de avances para justificar la inversión.
+## Resultado de la Decisión
+**Opción elegida:** Implementar un **API Gateway** que gestione las solicitudes HTTP de clientes (PC y móvil) hacia los microservicios y servicios monolíticos. Este enfoque es consistente con la decisión de usar **Servicios REST** para la comunicación entre microservicios y permitirá una transición ordenada, minimizando la complejidad de manejar múltiples puntos de entrada.
+* Reducción del impacto de cambios internos
+* Flexibilidad para modificar y escalar microservicios individualmente
 
-## Decisiones Alternativas
-- **Patrón de microservicios completo**: Requiere un esfuerzo inicial significativo para diseñar e implementar los nuevos servicios, lo que podría retrasar la migración.
-- **Arquitectura monolítica tradicional**: No aborda el requerimiento de permitir el acceso a los datos personales de los clientes desde la base de datos de Clientes.
+## Consecuencias
+**Positivas, porque**:
+- **Centralización** de la gestión de solicitudes y políticas de seguridad.
+- Facilita la **escalabilidad** del sistema, permitiendo agregar más microservicios sin reconfigurar la infraestructura de los clientes.
+- **Optimización del rendimiento** mediante balanceo de carga y control de tráfico.
 
-## Pros
-- Permite un enfoque incremental para la migración a microservicios.
-- Demostración temprana de valor al negocio.
-- Minima los cambios en la lógica del negocio existente.
-- Facilita la planificación cuidadosa de los nuevos servicios y su integración con el monolito.
+**Negativas, porque**:
+- **Punto único de fallo**: El API Gateway debe estar configurado para alta disponibilidad, ya que su fallo podría afectar la disponibilidad de los servicios.
+- **Latencia adicional**: Introduce una capa adicional en el enrutamiento de las solicitudes, lo que podría generar una pequeña sobrecarga en el rendimiento.
 
-## Contras
-- Puede introducir complejidad y sobrecarga adicionales.
-- Requiere un esfuerzo inicial significativo para el diseño e implementación de nuevos servicios.
-
-## Evaluación
-La decisión de aplicar el patrón Strangler Application es adecuada para el contexto y los requisitos planteados. Este patrón se alinea con el objetivo de la empresa de migrar hacia una arquitectura más flexible y evolutiva. Sin embargo, es esencial planificar cuidadosamente los servicios, diseñar su integración y establecer un cronograma claro para garantizar el éxito de la migración.

@@ -8,16 +8,16 @@
 - **Decisión**: Decidimos migrar usando el patrón Strangler porque nos permite realizar una transición controlada y priorizar las funciones más importantes.
 - **Impacto**: Mejora la escalabilidad y el rendimiento de servicios clave desde un principio, aunque puede generar problemas al mantener operativos el monolito y los microservicios simultáneamente.
 
-### **ADR 2: [Comunicación entre Microservicios mediante Servicios REST](./ADR002.md)**
+### **ADR 002: [Comunicación entre Microservicios mediante Servicios REST](./ADR002.md)**
 - **Problema**: Necesitamos definir cómo se comunicarán los microservicios.
 - **Decisión**: Optamos por utilizar servicios REST, más que nada porque es una restricción de la arquitectura.
 - **Impacto**: Facilita la independencia de los servicios, pero puede tener ciertos problemas como la latencia asociada a las comunicaciones.
 
-## **2. Diagramas**
+## **2. Diagramas de la iteración**
  Para ver como se comunican los microservicios y como se tendría que ver el sistema una vez migrado, se crearon los siguientes diagramas:
 
 ### **Vista inicial microservicios**
 ![Vista inicial microservicios](./Vista-inicial-microservicios.png)
 
-### **Diagrama de secuencia**
-![Diagrama de secuencia](./Diagrama-secuencia-inicial.png)
+### **Diagrama de secuencia cliente**
+![Diagrama de secuencia inicial](./Diagrama-secuencia-inicial.png)

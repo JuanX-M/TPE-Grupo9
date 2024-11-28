@@ -13,8 +13,11 @@
 ## Componentes
 ![componentes](./images/Componentes.png)
 
-## Arquitectura final
+## Diagrama de Microservicios 
 ![Arquitectura final](./images/Resultado-4-iteraciones.png)
 
-## Diagrama de secuencia final
+## Diagrama de secuencia 
 ![secuencia](./images/Diagrama-secuencia-final.png)
+
+## Diagrama de Deployment 
+![deployment](./images/diagrama-deployment.png)

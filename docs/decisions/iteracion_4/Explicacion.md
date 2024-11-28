@@ -17,5 +17,5 @@ En esta iteración decidimos seguir anvanzando sobre otros atributos de calidad,
 ### **Subsitema con las bases de datos por separado**
 ![subsistema](./Diagrama-de-iteración-4-(Subsistema).png)
 
-### **Diagrama de deployment del sistema**
+### **Diagrama de Deployment del sistema**
 ![deployment](./diagrama-deployment.png)
